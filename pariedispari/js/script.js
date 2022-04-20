@@ -20,13 +20,16 @@ const pariDispari = prompt('Pari o dispari').toLowerCase();
 
 console.log(pariDispari);
 
-const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
 const submit = document.getElementById('submit');
 
-let flag = true;
+let userNumber;
 
-while (flag) {
+let flag = false;
+
+while(!flag) {
+
+    userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
     if(isNaN(userNumber)){
 
@@ -42,7 +45,7 @@ while (flag) {
 
     } else {
         
-        flag = false;
+        flag = true;
 
     }
 }
@@ -56,7 +59,8 @@ console.log(machineNum);
 
 function randomNum(min, max) {
 
-    return Math.ceil(Math.random() * (max - min - 1) + min);
+    // return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.ceil(Math.random() * 5);
 
 }
 
