@@ -13,15 +13,15 @@
 
 
 // BONUS CON INPUT IN HTML
-/* 
+
 let parolaInserita;
 
 document.getElementById('submit').addEventListener('click', function(){
-    parolaInserita = document.getElementById('input').value;
+    parolaInserita = document.getElementById('input').value.trim();
     console.log('Stringa', parolaInserita);
     console.log('function result', palindrome(parolaInserita));
 }) 
- */
+
 
 //  Chiedo una parola all'utente
 // const parolaInserita = prompt('Inserisci una parola').toLocaleLowerCase(); 
@@ -34,8 +34,14 @@ function palindrome(string){
     
     // controllo che l'utente abbia inserito una parola
     if(!(isNaN(parolaInserita))) {
+
         alert('Inserisci una parola');
-    } 
+
+    } else if(Boolean(parolaInserita)){
+
+        alert('Inserisci una parola')
+
+    }
     
     // flag di controllo per la verifica del palindromo
     let paliFlag  = true;
