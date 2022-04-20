@@ -15,13 +15,16 @@
 // BONUS CON INPUT IN HTML
 /* 
 let parolaInserita;
+
 document.getElementById('submit').addEventListener('click', function(){
     parolaInserita = document.getElementById('input').value;
+    console.log('Stringa', parolaInserita);
+    console.log('function result', palindrome(parolaInserita));
 }) 
  */
 
 //  Chiedo una parola all'utente
- const parolaInserita = prompt('Inserisci una parola').toLocaleLowerCase(); 
+// const parolaInserita = prompt('Inserisci una parola').toLocaleLowerCase(); 
 
 console.log('Stringa', parolaInserita);
 
@@ -37,20 +40,15 @@ function palindrome(string){
     // flag di controllo per la verifica del palindromo
     let paliFlag  = true;
 
-
     // ciclo che controlla il palindromo
-    for(let i = 0; i < parolaInserita.length; i++){
+    for(let i = 0; i < parolaInserita.length/2; i++){
 
         // confronto i primi caretteri con gli ultimi 
         if(parolaInserita.charAt(i) != parolaInserita.charAt(parolaInserita.length-i-1)){
 
             paliFlag = false;
 
-        } else {
-
-            paliFlag = true;
-
-        }
+        } 
 
     } 
     
