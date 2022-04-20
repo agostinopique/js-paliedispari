@@ -6,22 +6,22 @@
     Bonus: L’inserimento avviene tramite un campo input
 
     1. Chiedo all'utente di inserire una parola;
-    2. Creo una funzionne che paragona le lettere della prima meta con la seconda metá, partendo dai lati opposti della parola;
+    2. Creo una funzionne che paragona le lettere della prima metá con la seconda metá, partendo dai lati opposti della parola;
     3. Creo un flag con valore true di base: se la parola é palindroma, resta true, sennò diventa false;
     4. Stampo a schermo il risultato del controllo;
  */
 
 
 // BONUS CON INPUT IN HTML
-
+/* 
 let parolaInserita;
 document.getElementById('submit').addEventListener('click', function(){
     parolaInserita = document.getElementById('input').value;
 }) 
-
+ */
 
 //  Chiedo una parola all'utente
-/* const parolaInserita = prompt('Inserisci una parola').toLocaleLowerCase(); */
+ const parolaInserita = prompt('Inserisci una parola').toLocaleLowerCase(); 
 
 console.log('Stringa', parolaInserita);
 
